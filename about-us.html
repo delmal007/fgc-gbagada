@@ -65,17 +65,16 @@
 <body>
 
 		<!-- Loader Start -->
-		<div class="preloader" id="preloader">
+		<!-- <div class="preloader" id="preloader">
 			<svg viewBox="0 0 1920 1080" preserveAspectRatio="none" version="1.1">
 				<path d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z"></path>
 			</svg>
 			<div class="inner">
 				<canvas class="progress-bar" id="progress-bar" width="200" height="200"></canvas>
 				<figure><img src="assets/image/logo.png" alt="Image"  style="width: 72px; height: 72px;"></figure>
-				<!-- <figure><img src="assets/images/icon-white.png" alt="Image"></figure> -->
 				<small>Loading</small> </div>
-			<!-- end inner --> 
-		</div>
+			
+		</div> -->
 	
 		<!-- Loader End -->
 	
@@ -285,15 +284,18 @@
 
 				<div class="col-lg-6 col-md-12 col-sm-12">
 
-					<div class="content">
+					<div class="about-data">
 
-						<h2>Welcome to The First Church of The Plains</h2>
+						<h3>The name: What does “Foursquare” mean?</h3>
 
-						<p class="w-85">Lorem ipsum dolor sit amet, consectetur adipisicing elit ipsa quae ab illo invene ipsa quae ab ille ab illo inventor sed  totam rem ape eaque ipsa quae ab illo invene ipsa ae ab ille ab illo inventore.</p>
+						<p>“Foursquare” is a biblical term used for the tabernacle in the Book of Exodus, of the Temple of the Lord in Ezekiel 40:47, and of Heaven, as described in the book of the Revelation.</p>
+						<p>The term “Foursquare Gospel” was given in the inspiration of revival our founder, Aimee Semple McPherson, during an evangelistic campaign in Oakland, California, in 1922.</p>
+						<p>It represents that which is equally balanced on all sides, established, and enduring. Such confidence in the power of the Gospel is also expressed by the verse, Hebrews 13:8, displayed in Foursquare churches proclaiming, “Jesus Christ the Same, Yesterday and Today and Forever.”</p>
+						<a href="about-us.html" class="theme-btn">Become a member</a>
 
 						<div class="sidetwo">
 
-						<div class="contacts">
+						<!-- <div class="contacts">
 
 							<span class="icon">
 
@@ -325,9 +327,9 @@
 
 							</ul>
 
-						</div>
+						</div> -->
 
-						<img class="sig-img" src="assets/images/sig-img.webp" alt="Signature Img">
+						<!-- <img class="sig-img" src="assets/images/sig-img.webp" alt="Signature Img"> -->
 
 					</div>
 
@@ -336,12 +338,36 @@
 				</div>
 
 				<div class="col-lg-6">
+						<div class="four-column-grid">
+							<!-- The Saviour -->
+							<div class="doctrine-card">
+									<img src="assets/images/4_cr.png" alt="The Saviour" class="doctrine-icon">
+									<h3>The Saviour</h3>
+									<p>Isaiah 53:5</p>
+							</div>
 
-					<div class="church-about-img">
+							<!-- The Healer -->
+							<div class="doctrine-card">
+									<img src="assets/images/4_cu.png" alt="The Healer" class="doctrine-icon">
+									<h3>The Healer</h3>
+									<p>Matthew 8:17</p>
+							</div>
 
-						<img src="assets/images/church-about-img.webp" alt="Church Image">
+							<!-- The Baptizer -->
+							<div class="doctrine-card">
+									<img src="assets/images/4_bi.png" alt="The Baptizer" class="doctrine-icon">
+									<h3>The Baptizer</h3>
+									<p>Acts 1:5,8</p>
+							</div>
 
+							<!-- The Coming King -->
+							<div class="doctrine-card">
+									<img src="assets/images/4_cn.png" alt="The Coming King" class="doctrine-icon">
+									<h3>The Coming King</h3>
+									<p>Revelation 19:16</p>
+							</div>
 					</div>
+					<!-- </div> -->
 
 				</div>
 
@@ -350,6 +376,58 @@
 		</div>
 
 	</section>
+
+
+
+<style>
+.four-column-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.doctrine-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.doctrine-card:hover {
+    transform: translateY(-5px);
+}
+
+.doctrine-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.scripture-verse {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #002D62;
+    color: white;
+    border-radius: 10px;
+}
+
+.scripture-verse .reference {
+    color: #FFB81C;
+    margin-top: 0.5rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .four-column-grid {
+        grid-template-columns: 1fr;
+    }
+    
+}
+</style>
 
 	<section class="gap about-us" style="background-color:#002D62 !important;">
 		<div class="container">
