@@ -2766,7 +2766,7 @@ img.sideimage {
 }
 .pastor .meta:before {
     content: "";
-    background-image: url('../images/pastor-icon.webp');
+    /* background-image: url('../images/pastor-icon.webp'); */
     background-repeat: no-repeat;
     position: absolute;
     width: 60px;
