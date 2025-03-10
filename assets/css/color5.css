@@ -41,7 +41,7 @@ ul.meta,
 .pd-cat-tags ul li ul.pd-tag li a:hover,
 .total-donation-amount .total_amount input,
 .pastor-meta p.designation{
-color: #790065;
+color: #FFB81C;
 }
 
 blockquote,
@@ -95,7 +95,7 @@ button.scrollTopStick,
 .payment-method .form-check-input:checked,
 .personal-info .dp-agree input:checked,
 .prog-bar .progress .progress-bar{
-background-color: #790065;
+background-color: #FFB81C;
 }
 
 
@@ -140,7 +140,7 @@ background-color: #790065;
 .personal-info select:focus,
 .total-donation-amount .total_amount input,
 .personal-info .dp-agree input:checked{
-border-color: #790065;
+border-color: #FFB81C;
 }
 
 
@@ -149,5 +149,5 @@ border-color: #790065;
 .event-meta > ul > li > svg,
 .pd-cart-heart .heart:hover svg,
 .preloader svg, .about-three .counter-three .box svg {
-	fill: #790065;
+	fill: #FFB81C;
 }
