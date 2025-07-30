@@ -286,61 +286,277 @@
 				</div>
 
 				<div class="col-lg-6 col-md-12 col-sm-12">
-
 					<aside>
-
 						<div class="blog-sidebar">
-
-							<div class="widget widget-recent-articles">
-
-								<h3>Join Ministry</h3>
-
-								<ul>
-
-									<li class="d-flex align-items-center">
-                                        <div>
-
-											<p class="">Required Skills</p>
-
-											<a href="blog-detail.html" class="d-flex font-bold">Have passion for children, Patience, Communication and enthusiasm.</a>
-
+							<div class="widget widget-recent-articles" style="background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+								<h3 style="font-size: 20px; font-weight: bold; margin-bottom: 20px; color: #333;">Join Ministry</h3>
+								<ul style="list-style: none; padding: 0; margin: 0;">
+									<li style="margin-bottom: 20px;">
+										<div>
+											<p style="font-size: 14px; color: #a1a9b1; margin-bottom: 5px;">Required skills</p>
+											<p style="font-size: 16px; color: #333; margin: 0;">Have passion for children, Patience, Communication and enthusiasm.</p>
 										</div>
-
 									</li>
-
-									<li class="d-flex align-items-center">
-                                        <div>
-
-											<p class="">Contact Information</p>
-
-											<a href="blog-detail.html" class="d-flex font-bold">Sister Stella Ovensere <br>
-                                                childrenchurch@foursquare.org</a><br>
-
-                                                <p>Please go through the teacher training dept of the Sunday School.</p>
-                                                <a href="JavaScript:void(0)" class="theme-btn w-100 justify-content-center">Join Ministry</a>
-
+									<li style="margin-bottom: 25px;">
+										<div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 15px;">
+											<p style="font-size: 14px; color: #a1a9b1; margin-bottom: 5px;">Contact Information</p>
+											<p style="font-size: 16px; color: #333; font-weight: bold; margin-bottom: 5px;">Sister Stella Ovensere </p>
+											<a href="mailto:fwi@foursquare.org" style="font-size: 16px; color: #0066cc; text-decoration: none;">childrenchurch@foursquare.org</a>
+											<p style="font-size: 16px; color: #333; margin: 0;">Please go through the teacher training dept of the Sunday School.</p>
 										</div>
-
-                                        
-
 									</li>
-
-									
-
+									<li>
+										<a href="JavaScript:void(0)" class="theme-btn w-100 justify-content-center" id="joinMinistryBtn">
+											Join Ministry
+										</a>
+									</li>
 								</ul>
-
 							</div>
-
-
 						</div>
-
 					</aside>
-
 				</div>
 
 			</div>
 
 		</div>
+		<!-- The Ministry Form Modal -->
+<div class="modal-overlay" id="ministryFormModal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Join a ministry</h3>
+            <span class="close-modal">&times;</span>
+        </div>
+        <form id="ministryJoinForm" class="ministry-form">
+            <div class="form-group dual-input">
+                <div class="input-group">
+                    <label>FIRST NAME</label>
+                    <input type="text" placeholder="First Name" required>
+                </div>
+                <div class="input-group">
+                    <label>LAST NAME</label>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>EMAIL</label>
+                <input type="email" placeholder="Email" required>
+            </div>
+            
+            <div class="form-group">
+                <label>WHAT DEPARTMENT WOULD YOU LIKE TO JOIN?</label>
+                <select required>
+                    <option value="" disabled selected>Please select department</option>
+                    <option>Mission and Evangelism (MAE)</option>
+                    <option>Multimedia Ministry</option>
+                    <option>Prayer Ministry</option>
+                    <option>TIMCORPS Programme</option>
+                    <option>Hall of Mentorship Programme</option>
+                    <option>The Comfort Centre</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>ANY QUESTIONS OR COMMENTS</label>
+                <textarea placeholder="Any questions or comments"></textarea>
+            </div>
+            
+            <button type="submit" class="theme-btn w-100 justify-content-center">Submit</button>
+        </form>
+    </div>
+</div>
+
+<style>
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.close-modal {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+/* Form Styles */
+.ministry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dual-input {
+    flex-direction: row;
+    gap: 15px;
+}
+
+.dual-input .input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+    text-transform: uppercase;
+}
+
+input, select, textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4a6fdc;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #4a6fdc;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3a5bc7;
+}
+
+/* .theme-btn {
+    display: inline-flex;
+    background: #4a6fdc;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.theme-btn:hover {
+    background: #3a5bc7;
+    color: white;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .dual-input {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get modal elements
+    const modal = document.getElementById('ministryFormModal');
+    const joinBtn = document.getElementById('joinMinistryBtn');
+    const closeBtn = document.querySelector('.close-modal');
+    
+    // Open modal when join button is clicked
+    joinBtn.addEventListener('click', function() {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+    
+    // Close modal when X is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    // Close modal when clicking outside content
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Form submission
+    const form = document.getElementById('ministryJoinForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Here you would add form submission logic
+        alert('Thank you for your submission! We will contact you soon.');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        form.reset();
+    });
+});
+</script>
 
 	</section>
 
